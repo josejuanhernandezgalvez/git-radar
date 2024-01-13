@@ -49,9 +49,9 @@ public class DynamoDBService {
             this.table = new DynamoDB(client).getTable(name);
         }
 
-        public Map<String, String> getObject(String keyValue) {
+        public Map<String, String> getObject(String keyName, String keyValue) {
             try {
-                return map(table.getItem("context", keyValue));
+                return map(table.getItem(keyName, keyValue));
             } catch (AmazonServiceException e) {
                 return new HashMap<>();
             }

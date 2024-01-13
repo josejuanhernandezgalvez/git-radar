@@ -10,6 +10,6 @@ public class Main {
         System.out.println(table.putObject("context","tal",
                 "word","estas"));
 
-        System.out.println(table.getObject("hola"));
+        System.out.println(table.getObject("context", "hola"));
     }
 }
