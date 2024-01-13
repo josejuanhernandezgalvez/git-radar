@@ -3,9 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Git-Radar.iml" filepath="$PROJECT_DIR$/Git-Radar.iml" />
-      <module fileurl="file://$PROJECT_DIR$/launcher/launcher.iml" filepath="$PROJECT_DIR$/launcher/launcher.iml" />
-      <module fileurl="file://$PROJECT_DIR$/token-datamart/token-datamart.iml" filepath="$PROJECT_DIR$/token-datamart/token-datamart.iml" />
-      <module fileurl="file://$PROJECT_DIR$/token-suggester/token-suggester.iml" filepath="$PROJECT_DIR$/token-suggester/token-suggester.iml" />
     </modules>
   </component>
 </project>
