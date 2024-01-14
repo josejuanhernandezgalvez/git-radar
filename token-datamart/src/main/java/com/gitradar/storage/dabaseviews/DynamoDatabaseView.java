@@ -1,4 +1,4 @@
-package com.gitradar.services;
+package com.gitradar.storage.dabaseviews;
 
 import com.amazonaws.AmazonServiceException;
 import com.amazonaws.client.builder.AwsClientBuilder.EndpointConfiguration;
@@ -7,27 +7,27 @@ import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
 import com.amazonaws.services.dynamodbv2.document.DynamoDB;
 import com.amazonaws.services.dynamodbv2.document.Item;
 import com.amazonaws.services.dynamodbv2.document.Table;
-import com.gitradar.DatabaseService;
+import com.gitradar.storage.DatabaseView;
 
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-public class DynamoDatabaseService implements DatabaseService {
+public class DynamoDatabaseView implements DatabaseView {
+    public final AmazonDynamoDB client;
+    public final String[] tableNames;
     public final String region;
     public final String ip;
     public final int port;
-    public final AmazonDynamoDB client;
-    public final String[] tables;
 
-    protected DynamoDatabaseService(String ip, int port, String region) {
+    protected DynamoDatabaseView(String ip, int port, String region) {
         this.ip = ip;
         this.port = port;
         this.region = region;
         this.client = AmazonDynamoDBClientBuilder.standard()
                             .withEndpointConfiguration(endpointConfiguration())
                             .build();
-        this.tables = this.client.listTables()
+        this.tableNames = this.client.listTables()
                                     .getTableNames()
                                     .toArray(String[]::new);
     }
@@ -38,8 +38,13 @@ public class DynamoDatabaseService implements DatabaseService {
 
     @Override
     public TableView table(String name) {
-        if (Arrays.asList(this.tables).contains(name)) return new DynamoDatabaseTableView(name, client);
+        if (Arrays.asList(this.tableNames).contains(name)) return new DynamoDatabaseTableView(name, client);
         throw new RuntimeException(String.format("No table with the name specified: %s", name));
+    }
+
+    @Override
+    public String[] tableNames() {
+        return this.tableNames;
     }
 
     public static class DynamoDatabaseTableView implements TableView {
@@ -101,8 +106,8 @@ public class DynamoDatabaseService implements DatabaseService {
             return this;
         }
 
-        public DynamoDatabaseService build() {
-            return new DynamoDatabaseService(this.ip, this.port, this.region);
+        public DynamoDatabaseView build() {
+            return new DynamoDatabaseView(this.ip, this.port, this.region);
         }
     }
 }

@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="094927ba-3efb-44ff-abaa-bc3e3891dec1" name="Changes" comment="getObject refactor -&gt; there was a magic String">
-      <change afterPath="$PROJECT_DIR$/token-datamart/src/main/java/com/gitradar/DatabaseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="094927ba-3efb-44ff-abaa-bc3e3891dec1" name="Changes" comment="interfaces implemented">
+      <change afterPath="$PROJECT_DIR$/token-datamart/src/main/java/com/gitradar/service/Response.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/token-datamart/src/main/java/com/gitradar/service/TokenSuggesterService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/token-datamart/src/main/java/DynamoDBService.java" beforeDir="false" afterPath="$PROJECT_DIR$/token-datamart/src/main/java/com/gitradar/services/DynamoDatabaseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/token-datamart/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/token-datamart/src/main/java/com/gitradar/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/token-datamart/src/main/java/com/gitradar/DatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/token-datamart/src/main/java/com/gitradar/storage/DatabaseView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/token-datamart/src/main/java/com/gitradar/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/token-datamart/src/main/java/com/gitradar/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/token-datamart/src/main/java/com/gitradar/services/DynamoDatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/token-datamart/src/main/java/com/gitradar/storage/dabaseviews/DynamoDatabaseView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/token-datamart/src/main/resources/resource.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +22,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -165,7 +167,7 @@
       <workItem from="1704892937775" duration="1145000" />
       <workItem from="1705133758904" duration="1773000" />
       <workItem from="1705135772444" duration="14101000" />
-      <workItem from="1705235629361" duration="336000" />
+      <workItem from="1705235629361" duration="4498000" />
     </task>
     <task id="LOCAL-00001" summary="structure implemented">
       <option name="closed" value="true" />
@@ -223,7 +225,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705152289526</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="interfaces implemented">
+      <option name="closed" value="true" />
+      <created>1705236186891</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1705236186891</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,7 +244,8 @@
     <MESSAGE value="structure implemented" />
     <MESSAGE value="dynamodb service implemented" />
     <MESSAGE value="getObject refactor -&gt; there was a magic String" />
-    <option name="LAST_COMMIT_MESSAGE" value="getObject refactor -&gt; there was a magic String" />
+    <MESSAGE value="interfaces implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="interfaces implemented" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

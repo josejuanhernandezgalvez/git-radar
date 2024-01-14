@@ -1,10 +1,12 @@
-package com.gitradar;
+package com.gitradar.storage;
 
 import java.util.Map;
 
-public interface DatabaseService {
+public interface DatabaseView {
 
     TableView table(String name);
+
+    String[] tableNames();
 
 
     interface TableView {
