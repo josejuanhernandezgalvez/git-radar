@@ -1,3 +1,5 @@
+package com.gitradar.services;
+
 import com.amazonaws.AmazonServiceException;
 import com.amazonaws.client.builder.AwsClientBuilder.EndpointConfiguration;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
@@ -5,19 +7,20 @@ import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
 import com.amazonaws.services.dynamodbv2.document.DynamoDB;
 import com.amazonaws.services.dynamodbv2.document.Item;
 import com.amazonaws.services.dynamodbv2.document.Table;
+import com.gitradar.DatabaseService;
 
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-public class DynamoDBService {
+public class DynamoDatabaseService implements DatabaseService {
     public final String region;
     public final String ip;
     public final int port;
     public final AmazonDynamoDB client;
     public final String[] tables;
 
-    protected DynamoDBService(String ip, int port, String region) {
+    protected DynamoDatabaseService(String ip, int port, String region) {
         this.ip = ip;
         this.port = port;
         this.region = region;
@@ -33,22 +36,24 @@ public class DynamoDBService {
         return new EndpointConfiguration(String.format("%s:%s", this.ip, this.port), this.region);
     }
 
+    @Override
     public TableView table(String name) {
-        if (Arrays.asList(this.tables).contains(name)) return new TableView(name, client);
+        if (Arrays.asList(this.tables).contains(name)) return new DynamoDatabaseTableView(name, client);
         throw new RuntimeException(String.format("No table with the name specified: %s", name));
     }
 
-    public static class TableView {
+    public static class DynamoDatabaseTableView implements TableView {
         public final String name;
         public final AmazonDynamoDB client;
         private final Table table;
 
-        private TableView(String name, AmazonDynamoDB client) {
+        private DynamoDatabaseTableView(String name, AmazonDynamoDB client) {
             this.name = name;
             this.client = client;
             this.table = new DynamoDB(client).getTable(name);
         }
 
+        @Override
         public Map<String, String> getObject(String keyName, String keyValue) {
             try {
                 return map(table.getItem(keyName, keyValue));
@@ -57,6 +62,7 @@ public class DynamoDBService {
             }
         }
 
+        @Override
         public Map<String, String> putObject(String keyName, String keyValue, String attributeName, String attributeValue) {
             Item item = new Item()
                     .withPrimaryKey(keyName, keyValue)
@@ -95,8 +101,8 @@ public class DynamoDBService {
             return this;
         }
 
-        public DynamoDBService build() {
-            return new DynamoDBService(this.ip, this.port, this.region);
+        public DynamoDatabaseService build() {
+            return new DynamoDatabaseService(this.ip, this.port, this.region);
         }
     }
 }

@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="094927ba-3efb-44ff-abaa-bc3e3891dec1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/launcher/src/main/resources/dynamodblocasltack.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/token-datamart/src/main/java/DynamoDBService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="094927ba-3efb-44ff-abaa-bc3e3891dec1" name="Changes" comment="getObject refactor -&gt; there was a magic String">
+      <change afterPath="$PROJECT_DIR$/token-datamart/src/main/java/com/gitradar/DatabaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/launcher/src/main/java/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/launcher/src/main/resources/resource.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/token-datamart/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/token-datamart/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/token-datamart/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/token-datamart/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/token-datamart/src/main/java/DynamoDBService.java" beforeDir="false" afterPath="$PROJECT_DIR$/token-datamart/src/main/java/com/gitradar/services/DynamoDatabaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/token-datamart/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/token-datamart/src/main/java/com/gitradar/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +21,7 @@
       <list>
         <option value="Python Script" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -36,9 +33,9 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
@@ -51,44 +48,50 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Application.launcher.Main.executor": "Run",
-    "Maven.launcher [clean].executor": "Run",
-    "Maven.launcher [compile].executor": "Run",
-    "Python.Tokenizer.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "feature/token-datamart",
-    "jdk.selected.JAVA_MODULE": "openjdk-21",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Jose Juan/IdeaProjects/git-radar/token-datamart/src/main/resources",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "/Users/josejuan/IdeaProjects/Git-Radar/storage/src/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.27441406",
-    "project.structure.side.proportion": "0.43261456",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.launcher.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.launcher [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.launcher [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Python.Tokenizer.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/token-datamart&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-21&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Jose Juan/IdeaProjects/git-radar/token-datamart/src/main/resources&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/josejuan/IdeaProjects/Git-Radar/storage/src/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.27441406&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.43261456&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="services" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Jose Juan\IdeaProjects\git-radar\token-datamart\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Jose Juan\IdeaProjects\git-radar\launcher\src\main\resources" />
     </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+      <option name="MAIN_CLASS_NAME" value="com.gitradar.Main" />
       <module name="token-datamart" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -161,7 +164,8 @@
       <workItem from="1703850122260" duration="328000" />
       <workItem from="1704892937775" duration="1145000" />
       <workItem from="1705133758904" duration="1773000" />
-      <workItem from="1705135772444" duration="13469000" />
+      <workItem from="1705135772444" duration="14101000" />
+      <workItem from="1705235629361" duration="336000" />
     </task>
     <task id="LOCAL-00001" summary="structure implemented">
       <option name="closed" value="true" />
@@ -203,7 +207,23 @@
       <option name="project" value="LOCAL" />
       <updated>1705135127859</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="dynamodb service implemented">
+      <option name="closed" value="true" />
+      <created>1705152064214</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1705152064214</updated>
+    </task>
+    <task id="LOCAL-00007" summary="getObject refactor -&gt; there was a magic String">
+      <option name="closed" value="true" />
+      <created>1705152289526</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1705152289526</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,7 +232,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="develop branh created" />
     <MESSAGE value="structure implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="structure implemented" />
+    <MESSAGE value="dynamodb service implemented" />
+    <MESSAGE value="getObject refactor -&gt; there was a magic String" />
+    <option name="LAST_COMMIT_MESSAGE" value="getObject refactor -&gt; there was a magic String" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

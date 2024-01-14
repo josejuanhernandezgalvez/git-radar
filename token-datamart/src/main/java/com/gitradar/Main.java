@@ -1,6 +1,11 @@
+package com.gitradar;
+
+import com.gitradar.DatabaseService.TableView;
+import com.gitradar.services.DynamoDatabaseService;
+
 public class Main {
     public static void main(String[] args) {
-        DynamoDBService.TableView table = new DynamoDBService.Builder()
+        TableView table = new DynamoDatabaseService.Builder()
                 .in("eu-central-2")
                 .port(4566)
                 .ip("http://localhost")
