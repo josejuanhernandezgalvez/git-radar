@@ -1,4 +1,4 @@
-package com.gitradar.service.api;
+package com.gitradar.service;
 
 public interface TokenSuggesterAPI {
     void start();

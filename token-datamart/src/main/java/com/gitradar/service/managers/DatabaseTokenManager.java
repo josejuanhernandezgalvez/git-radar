@@ -1,5 +1,7 @@
-package com.gitradar.service.manager;
+package com.gitradar.service.managers;
 
+import com.gitradar.service.TokenManager;
+import com.gitradar.service.WordContextDTO;
 import com.gitradar.storage.DatabaseView;
 import org.eclipse.jetty.websocket.api.MessageTooLargeException;
 

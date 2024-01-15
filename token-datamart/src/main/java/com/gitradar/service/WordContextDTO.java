@@ -1,4 +1,4 @@
-package com.gitradar.service.manager;
+package com.gitradar.service;
 
 public record WordContextDTO(String context, String nextWord) {
 

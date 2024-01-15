@@ -1,7 +1,8 @@
-package com.gitradar.service.api;
-import static com.gitradar.service.api.TokenSuggesterWebService.Response.Status.*;
+package com.gitradar.service.apis;
+import static com.gitradar.service.apis.TokenSuggesterWebService.Response.Status.*;
 
-import com.gitradar.service.manager.DatabaseTokenManager;
+import com.gitradar.service.TokenSuggesterAPI;
+import com.gitradar.service.managers.DatabaseTokenManager;
 import static spark.Spark.port;
 import static spark.Spark.get;
 

@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="094927ba-3efb-44ff-abaa-bc3e3891dec1" name="Changes" comment="DatabaseTokenManagerTest implemented">
-      <change afterPath="$PROJECT_DIR$/token-datamart/src/test/java/com/gitradar/TokenSuggesterWebServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/token-datamart/src/main/java/com/gitradar/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/token-datamart/src/main/java/com/gitradar/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/token-datamart/src/main/java/com/gitradar/service/service/TokenSuggesterAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/token-datamart/src/main/java/com/gitradar/service/api/TokenSuggesterAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/token-datamart/src/main/java/com/gitradar/service/service/TokenSuggesterWebService.java" beforeDir="false" afterPath="$PROJECT_DIR$/token-datamart/src/main/java/com/gitradar/service/api/TokenSuggesterWebService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/token-datamart/src/main/java/com/gitradar/service/suggester/DatabaseTokenManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/token-datamart/src/main/java/com/gitradar/service/manager/DatabaseTokenManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/token-datamart/src/main/java/com/gitradar/service/suggester/TokenManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/token-datamart/src/main/java/com/gitradar/service/manager/TokenManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/token-datamart/src/main/java/com/gitradar/service/suggester/WordContextDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/token-datamart/src/main/java/com/gitradar/service/manager/WordContextDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/token-datamart/src/test/java/com/gitradar/DatabaseTokenManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/token-datamart/src/test/java/com/gitradar/DatabaseTokenManagerTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="094927ba-3efb-44ff-abaa-bc3e3891dec1" name="Changes" comment="refactor made" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -98,7 +88,7 @@
       <recent name="com.gitradar" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DatabaseTokenManagerTest">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.gitradar.Main" />
       <module name="token-datamart" />
@@ -182,9 +172,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.DatabaseTokenManagerTest" />
         <item itemvalue="JUnit.DatabaseTokenManagerTest.testGet" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.launcher.Main" />
       </list>
     </recent_temporary>
@@ -211,7 +201,7 @@
       <workItem from="1705135772444" duration="14101000" />
       <workItem from="1705235629361" duration="4852000" />
       <workItem from="1705325522591" duration="554000" />
-      <workItem from="1705326542059" duration="12309000" />
+      <workItem from="1705326542059" duration="12709000" />
     </task>
     <task id="LOCAL-00001" summary="structure implemented">
       <option name="closed" value="true" />
@@ -301,7 +291,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705355641987</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="refactor made">
+      <option name="closed" value="true" />
+      <created>1705356966110</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1705356966110</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -316,7 +314,8 @@
     <MESSAGE value="TokenSuggester implemented" />
     <MESSAGE value="WebAPI implemented" />
     <MESSAGE value="DatabaseTokenManagerTest implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="DatabaseTokenManagerTest implemented" />
+    <MESSAGE value="refactor made" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor made" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
