@@ -1,37 +1,45 @@
 package com.gitradar.service.suggester;
 
 import com.gitradar.storage.DatabaseView;
+import org.eclipse.jetty.websocket.api.MessageTooLargeException;
 
 import java.util.Arrays;
 import java.util.Map;
 
 import static java.lang.String.format;
 
-public class TokenSuggester {
+public class DatabaseTokenManager implements TokenManager {
+    private final String contextIsTooLarge = "exceeded the size limit for context";
     public static final int numberOfDigitsForEachTable = 2;
     public static final String separator = ",";
-    private final DatabaseView databaseView;
-    public String keyName = "context";
     public String attributeName = "word";
+    public String keyName = "context";
+    private final DatabaseView databaseView;
 
-    public TokenSuggester(DatabaseView databaseView) {
+    public DatabaseTokenManager(DatabaseView databaseView) {
         this.databaseView = databaseView;
     }
 
-    public Response get(String context) {
+    public WordContextDTO get(String context) {
+        if (context.split(separator).length > maxContext()) throw new MessageTooLargeException(contextIsTooLarge);
         Map<String, String> response = tableFor(context).getObject(keyName, context);
-        return new Response.Builder()
+        return new WordContextDTO.Builder()
                            .context(response.get(keyName))
                            .nextWord(response.get(attributeName))
                            .build();
     }
 
-    public Response put(String context, String nextWord) {
+    public WordContextDTO post(String context, String nextWord) {
+        if (context.split(separator).length > maxContext()) throw new MessageTooLargeException(contextIsTooLarge);
         tableFor(context).putObject(keyName, context, attributeName, nextWord);
-        return new Response.Builder()
+        return new WordContextDTO.Builder()
                            .context(context)
                            .nextWord(nextWord)
                            .build();
+    }
+
+    private int maxContext() {
+        return databaseView.tableNames().length;
     }
 
     private DatabaseView.TableView tableFor(String context) {

@@ -1,6 +1,6 @@
 package com.gitradar.service.suggester;
 
-public record Response(String context, String nextWord) {
+public record WordContextDTO(String context, String nextWord) {
 
     public static class Builder {
         private String context;
@@ -16,8 +16,8 @@ public record Response(String context, String nextWord) {
             return this;
         }
 
-        public Response build() {
-            return new Response(this.context, this.nextWord);
+        public WordContextDTO build() {
+            return new WordContextDTO(this.context, this.nextWord);
         }
     }
 }

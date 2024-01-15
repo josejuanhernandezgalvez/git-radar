@@ -1,6 +1,7 @@
 package com.gitradar;
 
-import com.gitradar.service.suggester.TokenSuggester;
+import com.gitradar.service.service.TokenSuggesterWebService;
+import com.gitradar.service.suggester.DatabaseTokenManager;
 import com.gitradar.storage.dabaseviews.DynamoDatabaseView;
 
 public class Main {
@@ -10,6 +11,9 @@ public class Main {
                 .port(4566)
                 .ip("http://localhost")
                 .build();
-        TokenSuggester service = new TokenSuggester(databaseView);
+        DatabaseTokenManager suggester = new DatabaseTokenManager(databaseView);
+        new TokenSuggesterWebService(suggester)
+                .at(8080)
+                .start();
     }
 }
