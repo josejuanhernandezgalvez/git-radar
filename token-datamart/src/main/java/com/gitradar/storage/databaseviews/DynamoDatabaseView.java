@@ -1,4 +1,4 @@
-package com.gitradar.storage.dabaseviews;
+package com.gitradar.storage.databaseviews;
 
 import com.amazonaws.AmazonServiceException;
 import com.amazonaws.client.builder.AwsClientBuilder.EndpointConfiguration;

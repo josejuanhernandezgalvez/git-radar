@@ -2,7 +2,7 @@ package com.gitradar;
 
 import com.gitradar.service.apis.TokenSuggesterWebService;
 import com.gitradar.service.managers.DatabaseTokenManager;
-import com.gitradar.storage.dabaseviews.DynamoDatabaseView;
+import com.gitradar.storage.databaseviews.DynamoDatabaseView;
 
 public class Main {
     public static void main(String[] args) {
