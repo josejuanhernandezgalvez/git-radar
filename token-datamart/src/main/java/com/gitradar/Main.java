@@ -1,7 +1,7 @@
 package com.gitradar;
 
-import com.gitradar.service.service.TokenSuggesterWebService;
-import com.gitradar.service.suggester.DatabaseTokenManager;
+import com.gitradar.service.api.TokenSuggesterWebService;
+import com.gitradar.service.manager.DatabaseTokenManager;
 import com.gitradar.storage.dabaseviews.DynamoDatabaseView;
 
 public class Main {

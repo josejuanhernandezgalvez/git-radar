@@ -1,7 +1,7 @@
 package com.gitradar;
 
-import com.gitradar.service.suggester.DatabaseTokenManager;
-import com.gitradar.service.suggester.WordContextDTO;
+import com.gitradar.service.manager.DatabaseTokenManager;
+import com.gitradar.service.manager.WordContextDTO;
 import com.gitradar.storage.DatabaseView;
 import org.junit.Before;
 import org.junit.Test;

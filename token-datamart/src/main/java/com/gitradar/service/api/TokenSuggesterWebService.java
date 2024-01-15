@@ -1,8 +1,7 @@
-package com.gitradar.service.service;
+package com.gitradar.service.api;
+import static com.gitradar.service.api.TokenSuggesterWebService.Response.Status.*;
 
-import static com.gitradar.service.service.TokenSuggesterWebService.Response.Status.*;
-
-import com.gitradar.service.suggester.DatabaseTokenManager;
+import com.gitradar.service.manager.DatabaseTokenManager;
 import static spark.Spark.port;
 import static spark.Spark.get;
 
@@ -10,7 +9,7 @@ import com.google.gson.Gson;
 import org.eclipse.jetty.websocket.api.MessageTooLargeException;
 
 
-public class TokenSuggesterWebService implements TokenSuggesterAPI{
+public class TokenSuggesterWebService implements TokenSuggesterAPI {
     private final DatabaseTokenManager suggester;
     private final ResponseSerializer serializer;
     public int port = 8080;

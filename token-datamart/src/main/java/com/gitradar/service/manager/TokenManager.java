@@ -1,4 +1,4 @@
-package com.gitradar.service.suggester;
+package com.gitradar.service.manager;
 
 public interface TokenManager {
     WordContextDTO get(String context);

@@ -1,4 +1,4 @@
-package com.gitradar.service.suggester;
+package com.gitradar.service.manager;
 
 import com.gitradar.storage.DatabaseView;
 import org.eclipse.jetty.websocket.api.MessageTooLargeException;
@@ -20,6 +20,7 @@ public class DatabaseTokenManager implements TokenManager {
         this.databaseView = databaseView;
     }
 
+    @Override
     public WordContextDTO get(String context) {
         if (context.split(separator).length > maxContext()) throw new MessageTooLargeException(contextIsTooLarge);
         Map<String, String> response = tableFor(context).getObject(keyName, context);
@@ -29,6 +30,7 @@ public class DatabaseTokenManager implements TokenManager {
                            .build();
     }
 
+    @Override
     public WordContextDTO post(String context, String nextWord) {
         if (context.split(separator).length > maxContext()) throw new MessageTooLargeException(contextIsTooLarge);
         tableFor(context).putObject(keyName, context, attributeName, nextWord);
@@ -38,7 +40,7 @@ public class DatabaseTokenManager implements TokenManager {
                            .build();
     }
 
-    private int maxContext() {
+    public int maxContext() {
         return databaseView.tableNames().length;
     }
 
