@@ -9,7 +9,7 @@ public class Main {
         DynamoDatabaseView databaseView = new DynamoDatabaseView.Builder()
                 .in("eu-central-2")
                 .port(4566)
-                .ip("http://localhost")
+                .ip("http://host.docker.internal")
                 .build();
         DatabaseTokenManager suggester = new DatabaseTokenManager(databaseView);
         new TokenSuggesterWebService(suggester)

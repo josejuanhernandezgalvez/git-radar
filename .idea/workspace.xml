@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="094927ba-3efb-44ff-abaa-bc3e3891dec1" name="Changes" comment="refactor made" />
+    <list default="true" id="094927ba-3efb-44ff-abaa-bc3e3891dec1" name="Changes" comment="refactor made: dabaseViews -&gt; databaseViews">
+      <change afterPath="$PROJECT_DIR$/token-datamart/src/main/resources/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/token-datamart/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/token-datamart/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/token-datamart/src/main/java/com/gitradar/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/token-datamart/src/main/java/com/gitradar/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,6 +55,13 @@
     "JUnit.DatabaseTokenManagerTest.testGet.executor": "Run",
     "Maven.launcher [clean].executor": "Run",
     "Maven.launcher [compile].executor": "Run",
+    "Maven.token-datamart [clean].executor": "Run",
+    "Maven.token-datamart [compile].executor": "Run",
+    "Maven.token-datamart [org.apache.maven.plugins:maven-clean-plugin:3.2.0:clean].executor": "Run",
+    "Maven.token-datamart [org.apache.maven.plugins:maven-compiler-plugin:3.11.0:compile].executor": "Run",
+    "Maven.token-datamart [org.apache.maven.plugins:maven-deploy-plugin:3.1.1:deploy].executor": "Run",
+    "Maven.token-datamart [package].executor": "Run",
+    "Maven.token-datamart [validate].executor": "Run",
     "Python.Tokenizer.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -79,6 +91,7 @@
       <recent name="C:\Users\Jose Juan\IdeaProjects\git-radar\token-datamart\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Jose Juan\IdeaProjects\git-radar\token-datamart\src\main\resources" />
       <recent name="C:\Users\Jose Juan\IdeaProjects\git-radar\launcher\src\main\resources" />
     </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
@@ -201,7 +214,8 @@
       <workItem from="1705135772444" duration="14101000" />
       <workItem from="1705235629361" duration="4852000" />
       <workItem from="1705325522591" duration="554000" />
-      <workItem from="1705326542059" duration="12709000" />
+      <workItem from="1705326542059" duration="14276000" />
+      <workItem from="1705399968150" duration="2624000" />
     </task>
     <task id="LOCAL-00001" summary="structure implemented">
       <option name="closed" value="true" />
@@ -299,7 +313,23 @@
       <option name="project" value="LOCAL" />
       <updated>1705356966110</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="refactor made">
+      <option name="closed" value="true" />
+      <created>1705357444169</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1705357444169</updated>
+    </task>
+    <task id="LOCAL-00014" summary="refactor made: dabaseViews -&gt; databaseViews">
+      <option name="closed" value="true" />
+      <created>1705357524697</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1705357524697</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -315,7 +345,8 @@
     <MESSAGE value="WebAPI implemented" />
     <MESSAGE value="DatabaseTokenManagerTest implemented" />
     <MESSAGE value="refactor made" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor made" />
+    <MESSAGE value="refactor made: dabaseViews -&gt; databaseViews" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor made: dabaseViews -&gt; databaseViews" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
