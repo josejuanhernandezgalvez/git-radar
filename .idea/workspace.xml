@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="094927ba-3efb-44ff-abaa-bc3e3891dec1" name="Changes" comment="refactor made: dabaseViews -&gt; databaseViews">
-      <change afterPath="$PROJECT_DIR$/token-datamart/src/main/resources/Dockerfile" afterDir="false" />
+    <list default="true" id="094927ba-3efb-44ff-abaa-bc3e3891dec1" name="Changes" comment="docker image and container ready to run">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/token-datamart/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/token-datamart/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/token-datamart/src/main/java/com/gitradar/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/token-datamart/src/main/java/com/gitradar/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -105,6 +103,7 @@
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.gitradar.Main" />
       <module name="token-datamart" />
+      <option name="PROGRAM_PARAMETERS" value="http://localhost" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -215,7 +214,7 @@
       <workItem from="1705235629361" duration="4852000" />
       <workItem from="1705325522591" duration="554000" />
       <workItem from="1705326542059" duration="14276000" />
-      <workItem from="1705399968150" duration="2624000" />
+      <workItem from="1705399968150" duration="5399000" />
     </task>
     <task id="LOCAL-00001" summary="structure implemented">
       <option name="closed" value="true" />
@@ -329,7 +328,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705357524697</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="docker image and container ready to run">
+      <option name="closed" value="true" />
+      <created>1705402847328</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1705402847328</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -346,7 +353,8 @@
     <MESSAGE value="DatabaseTokenManagerTest implemented" />
     <MESSAGE value="refactor made" />
     <MESSAGE value="refactor made: dabaseViews -&gt; databaseViews" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor made: dabaseViews -&gt; databaseViews" />
+    <MESSAGE value="docker image and container ready to run" />
+    <option name="LAST_COMMIT_MESSAGE" value="docker image and container ready to run" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
