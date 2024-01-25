@@ -22,7 +22,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="token-datamart" />
+        <module name="token-datamart-builder" />
+        <module name="metrics" />
         <module name="launcher" />
+        <module name="tokenizer" />
       </profile>
     </annotationProcessing>
   </component>
