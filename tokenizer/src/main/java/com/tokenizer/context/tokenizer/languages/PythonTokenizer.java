@@ -9,16 +9,16 @@ public class PythonTokenizer extends Tokenizer {
         StringBuilder result = new StringBuilder();
         int i = 0;
         int n = code.length();
-        boolean insideComment = false;
+        boolean insideLineComment = false;
         boolean insideDocstring = false;
 
         while (i < n) {
             char currentChar = code.charAt(i);
-            insideComment |= !insideDocstring && currentChar == '#';
-            insideDocstring |= !insideComment && currentChar == '"' && i + 2 < n && code.substring(i + 1, i + 3).equals("\"\"");
-            result.append(!insideComment && !insideDocstring ? currentChar : "");
+            insideLineComment |= !insideDocstring && currentChar == '#';
+            insideDocstring |= !insideLineComment && currentChar == '"' && i + 2 < n && code.substring(i + 1, i + 3).equals("\"\"");
+            result.append(!insideLineComment && !insideDocstring ? currentChar : "");
             insideDocstring &= !(insideDocstring && currentChar == '"' && i + 2 < n && code.substring(i + 1, i + 3).equals("\"\""));
-            insideComment &= !(insideComment && currentChar == '\n');
+            insideLineComment &= !(insideLineComment && currentChar == '\n');
             i++;
         }
         return result.toString();

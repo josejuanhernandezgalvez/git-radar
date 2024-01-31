@@ -1,16 +1,16 @@
 package com.tokenizer.utils;
 
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.Gson;
 import com.tokenizer.context.SourceCode;
 
-public class SourceCodeDeserializer implements Deserializer {
-    private final ObjectMapper objectMapper = new ObjectMapper();
+public class SourceCodeDeserializer implements Deserializer{
+    private final Gson gson = new Gson();
 
     @Override
     public SourceCode deserialize(String jsonString) {
         try {
-            return objectMapper.readValue(jsonString, SourceCode.class);
+            return gson.fromJson(jsonString, SourceCode.class);
         } catch (Exception e) {
             e.printStackTrace();
             return null;

@@ -3,19 +3,27 @@ package com.builder;
 import java.util.List;
 
 public class TokenizedCode {
-    private long timestamp;
+    private long ts;
     private List<String> tokenizedCode;
 
     public TokenizedCode(List<String> tokenized, long currentTimeMillis) {
         this.tokenizedCode = tokenized;
-        this.timestamp = currentTimeMillis;
+        this.ts = currentTimeMillis;
     }
 
-    public List<String> getTokenizedCode() { return tokenizedCode; }
+    public List<String> getTokenizedCode() {
+        return tokenizedCode;
+    }
 
-    public void setName(String[] tokenizedCode) { this.tokenizedCode = List.of(tokenizedCode); }
+    public void setName(String[] tokenizedCode) {
+        this.tokenizedCode = List.of(tokenizedCode);
+    }
 
-    public long getTimeStamp() { return timestamp; }
+    public long getTimeStamp() {
+        return ts;
+    }
 
-    public void setTimestamp(long timestamp) { this.timestamp = timestamp; }
+    public void setTs(long ts) {
+        this.ts = ts;
+    }
 }

@@ -6,13 +6,13 @@ import com.gitradar.storage.databaseviews.DynamoDatabaseView;
 
 public class Main {
     public static void main(String[] args) {
-        if (args.length < 1) throw new RuntimeException("IP has not been provided");
 
         DynamoDatabaseView databaseView = new DynamoDatabaseView.Builder()
                 .in("eu-central-2")
                 .port(4566)
-                .ip(args[0])
+                .ip("127.0.0.1")
                 .build();
+
         DatabaseTokenManager suggester = new DatabaseTokenManager(databaseView);
         new TokenSuggesterWebService(suggester)
                 .at(8080)

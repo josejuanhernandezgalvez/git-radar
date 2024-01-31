@@ -33,7 +33,7 @@ public class DynamoDatabaseView implements DatabaseView {
     }
 
     private EndpointConfiguration endpointConfiguration() {
-        return new EndpointConfiguration(String.format("%s:%s", this.ip, this.port), this.region);
+        return new EndpointConfiguration(String.format("http://%s:%s", this.ip, this.port), this.region);
     }
 
     @Override

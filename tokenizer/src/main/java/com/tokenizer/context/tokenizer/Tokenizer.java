@@ -12,17 +12,18 @@ public abstract class Tokenizer {
     private static final Pattern pattern = Pattern.compile("[.,;:=+!?()\"<>'\\\\/\\[\\]{}]");
 
     public List<String> tokenize(String code) {
-        String codeWithoutSpecialSpaces = removeSpecialSpaces(code);
-        String codeWithoutComments = removeComments(codeWithoutSpecialSpaces);
         List<String> tokens = new ArrayList<>();
-        Arrays.stream(codeWithoutComments.split(" "))
+        Arrays.stream(clean(code))
                 .forEach(word -> tokens.addAll(separatePunctuation(word)));
         return tokens;
     }
 
+    private String[] clean(String code) {
+        return removeComments(removeSpecialSpaces(code)).split(" ");
+    }
+
     private boolean hasPunctuation(String word) {
-        Matcher matcher = pattern.matcher(word);
-        return matcher.find();
+        return pattern.matcher(word).find();
     }
 
     private List<String> separatePunctuation(String word) {

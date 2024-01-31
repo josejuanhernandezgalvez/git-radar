@@ -6,9 +6,15 @@ public class SourceCode {
 
     public String getName() { return name; }
 
-    public void setName(String name) { this.name = name; }
+    public void setName(String name) {
+        this.name = name;
+    }
 
-    public String getCode() { return code; }
+    public String getCode() {
+        return code;
+    }
 
-    public void setCode(String code) { this.code = code; }
+    public void setCode(String code) {
+        this.code = code;
+    }
 }

@@ -7,20 +7,17 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class TokenizerMapper {
+    private static final Map<String, Class<? extends Tokenizer>> Map = createMap();
 
-    private static final Map<String, Class<? extends Tokenizer>> TOKENIZER_MAP;
-
-    static {
-        TOKENIZER_MAP = new HashMap<>();
-        initializeTokenizerMap();
+    private static java.util.Map<String, Class<? extends Tokenizer>> createMap() {
+        HashMap<String, Class<? extends Tokenizer>> result = new HashMap<>();
+        result.put("java", JavaTokenizer.class);
+        result.put("py", PythonTokenizer.class);
+        return result;
     }
 
-    private static void initializeTokenizerMap() {
-        TOKENIZER_MAP.put("java", JavaTokenizer.class);
-        TOKENIZER_MAP.put("py", PythonTokenizer.class);
-    }
 
     public Class<? extends Tokenizer> getObjectClass(String fileExtension) {
-        return TOKENIZER_MAP.get(fileExtension.toLowerCase());
+        return Map.get(fileExtension.toLowerCase());
     }
 }

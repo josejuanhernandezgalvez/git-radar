@@ -14,15 +14,11 @@ public class JavaTokenizer extends Tokenizer {
 
         while (i < n) {
             char currentChar = code.charAt(i);
-
             insideLineComment |= !insideBlockComment && currentChar == '/' && i + 1 < n && code.charAt(i + 1) == '/';
             insideBlockComment |= !insideLineComment && currentChar == '/' && i + 1 < n && code.charAt(i + 1) == '*';
-
             result.append(!insideLineComment && !insideBlockComment ? currentChar : "");
-
             insideLineComment &= !(insideLineComment && currentChar == '\n');
             insideBlockComment &= !(insideBlockComment && currentChar == '*' && i + 1 < n && code.charAt(i + 1) == '/');
-
             i++;
         }
         return result.toString();
