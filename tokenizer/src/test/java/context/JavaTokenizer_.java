@@ -1,11 +1,10 @@
 package context;
 
 import com.tokenizer.context.tokenizer.languages.JavaTokenizer;
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.List;
-
-import static org.junit.Assert.assertEquals;
 
 public class JavaTokenizer_ {
 
@@ -27,7 +26,7 @@ public class JavaTokenizer_ {
         );
 
         List<String> tokenized = javaTokenizer.tokenize(code);
-        assertEquals(expectedTokens, tokenized);
+        Assert.assertEquals(expectedTokens, tokenized);
     }
 
 }

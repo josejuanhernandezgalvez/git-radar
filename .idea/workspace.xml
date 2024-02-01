@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="094927ba-3efb-44ff-abaa-bc3e3891dec1" name="Changes" comment="changed java version" />
+    <list default="true" id="094927ba-3efb-44ff-abaa-bc3e3891dec1" name="Changes" comment="actions finished">
+      <change beforePath="$PROJECT_DIR$/tokenizer/src/test/java/context/JavaTokenizer_.java" beforeDir="false" afterPath="$PROJECT_DIR$/tokenizer/src/test/context/JavaTokenizer_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tokenizer/src/test/java/context/PythonTokenizer_.java" beforeDir="false" afterPath="$PROJECT_DIR$/tokenizer/src/test/context/PythonTokenizer_.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,58 +68,60 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main (1).executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.com.builder.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.com.metrics.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.com.tokenizer.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.launcher.Main.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.All in tokenizer.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.DatabaseTokenManagerTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.DatabaseTokenManagerTest.testGet.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.java in tokenizer.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.launcher [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.launcher [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.metrics [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.metrics [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.metrics [package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.token-datamart [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.token-datamart [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.token-datamart [org.apache.maven.plugins:maven-clean-plugin:3.2.0:clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.token-datamart [org.apache.maven.plugins:maven-compiler-plugin:3.11.0:compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.token-datamart [org.apache.maven.plugins:maven-deploy-plugin:3.1.1:deploy].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.token-datamart [package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.token-datamart [validate].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.token-datamart-builder [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.token-datamart-builder [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.token-datamart-builder [package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.tokenizer [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.tokenizer [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.tokenizer [package].executor&quot;: &quot;Run&quot;,
-    &quot;Python.Tokenizer.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-17&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Jose Juan/IdeaProjects/git-radar/launcher/src/main/resources/localstack_data/artifacts&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/josejuan/IdeaProjects/Git-Radar/storage/src/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.27441406&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.43261456&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.import&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main (1).executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.com.builder.Main.executor": "Run",
+    "Application.com.metrics.Main.executor": "Run",
+    "Application.com.tokenizer.Main.executor": "Run",
+    "Application.launcher.Main.executor": "Run",
+    "JUnit.All in tokenizer.executor": "Run",
+    "JUnit.DatabaseTokenManagerTest.executor": "Run",
+    "JUnit.DatabaseTokenManagerTest.testGet.executor": "Run",
+    "JUnit.java in tokenizer.executor": "Run",
+    "Maven.launcher [clean].executor": "Run",
+    "Maven.launcher [compile].executor": "Run",
+    "Maven.metrics [clean].executor": "Run",
+    "Maven.metrics [compile].executor": "Run",
+    "Maven.metrics [package].executor": "Run",
+    "Maven.token-datamart [clean].executor": "Run",
+    "Maven.token-datamart [compile].executor": "Run",
+    "Maven.token-datamart [org.apache.maven.plugins:maven-clean-plugin:3.2.0:clean].executor": "Run",
+    "Maven.token-datamart [org.apache.maven.plugins:maven-compiler-plugin:3.11.0:compile].executor": "Run",
+    "Maven.token-datamart [org.apache.maven.plugins:maven-deploy-plugin:3.1.1:deploy].executor": "Run",
+    "Maven.token-datamart [package].executor": "Run",
+    "Maven.token-datamart [validate].executor": "Run",
+    "Maven.token-datamart-builder [clean].executor": "Run",
+    "Maven.token-datamart-builder [compile].executor": "Run",
+    "Maven.token-datamart-builder [package].executor": "Run",
+    "Maven.tokenizer [clean].executor": "Run",
+    "Maven.tokenizer [compile].executor": "Run",
+    "Maven.tokenizer [package].executor": "Run",
+    "Maven.tokenizer [test].executor": "Run",
+    "Maven.tokenizer [validate].executor": "Run",
+    "Python.Tokenizer.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "jdk.selected.JAVA_MODULE": "openjdk-17",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Jose Juan/IdeaProjects/git-radar/launcher/src/main/resources/localstack_data/artifacts",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "/Users/josejuan/IdeaProjects/Git-Radar/storage/src/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.27441406",
+    "project.structure.side.proportion": "0.43261456",
+    "settings.editor.selected.configurable": "editor.preferences.import",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="services" />
@@ -291,7 +296,7 @@
       <workItem from="1706295362971" duration="14610000" />
       <workItem from="1706344744921" duration="27327000" />
       <workItem from="1706700429168" duration="1055000" />
-      <workItem from="1706796412718" duration="302000" />
+      <workItem from="1706796412718" duration="695000" />
     </task>
     <task id="LOCAL-00001" summary="structure implemented">
       <option name="closed" value="true" />
@@ -501,7 +506,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706796470231</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="actions finished">
+      <option name="closed" value="true" />
+      <created>1706796893655</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1706796893655</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -538,7 +551,8 @@
     <MESSAGE value="trying a different approach" />
     <MESSAGE value="bugfix" />
     <MESSAGE value="changed java version" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed java version" />
+    <MESSAGE value="actions finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="actions finished" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
