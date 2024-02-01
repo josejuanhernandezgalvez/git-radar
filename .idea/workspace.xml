@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="094927ba-3efb-44ff-abaa-bc3e3891dec1" name="Changes" comment="bugfix" />
+    <list default="true" id="094927ba-3efb-44ff-abaa-bc3e3891dec1" name="Changes" comment="trying a different approach" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -449,7 +449,23 @@
       <option name="project" value="LOCAL" />
       <updated>1706795417135</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="changed the name">
+      <option name="closed" value="true" />
+      <created>1706795503486</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1706795503486</updated>
+    </task>
+    <task id="LOCAL-00023" summary="trying a different approach">
+      <option name="closed" value="true" />
+      <created>1706795686950</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1706795686950</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -483,7 +499,9 @@
     <MESSAGE value="hot-fix: version of github actions files changed" />
     <MESSAGE value="github actions" />
     <MESSAGE value="bugfix" />
-    <option name="LAST_COMMIT_MESSAGE" value="bugfix" />
+    <MESSAGE value="changed the name" />
+    <MESSAGE value="trying a different approach" />
+    <option name="LAST_COMMIT_MESSAGE" value="trying a different approach" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
