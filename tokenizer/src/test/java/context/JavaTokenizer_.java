@@ -27,7 +27,6 @@ public class JavaTokenizer_ {
         );
 
         List<String> tokenized = javaTokenizer.tokenize(code);
-        System.out.println(tokenized);
         assertEquals(expectedTokens, tokenized);
     }
 
