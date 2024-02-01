@@ -31,11 +31,15 @@ This project is structured in two key parts, each contributing uniquely to the o
 4. **DynamoDB Database**
    - Stores the different n-grams formed by the `token-datamart-builder` Lambda in JSON format. The structure includes a "context" field representing the words within the window and a "next" field indicating the next word to complete.
 
+#### APIs
+All the questions that you want to ask must be carried out from the API that it supports the token-suggester module, both to obtain the next token given a list of words, and to obtain a certain metric on one of the processed files. Therefore, we can differentiate two main routes within this api.
+
+1. On the one hand, we are in charge of giving the user the next token. To access it, you must follow the path /gitradar/token-suggester/next/:word, with word being a mandatory parameter.
+
+2. On the other hand, we have the path /gitradar/code-metric/:file/:metric, which returns the value of the desired metric for the indicated file.
 
 ![Infrastructure](readme-resources/infrastructure.jpg)
 
-
-#### APIs
 
 
 
