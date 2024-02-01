@@ -1,5 +1,5 @@
 # Git-Radar
-[![My Skills](https://skillicons.dev/icons?i=java,aws&perline=3)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=java,aws,docker&perline=3)](https://skillicons.dev)
 
 ### Project Description
 This project is structured in two key parts, each contributing uniquely to the overall functionality of the suggester: metric collection and code file tokenization. Both phases are integrated into AWS infrastructure to provide a robust and efficient suggester.
@@ -129,3 +129,11 @@ To configure the `token-suggester` service, follow these steps:
     ```
 With these steps, your environment will be configured and ready for use.
 
+## Contact
+
+(c) 2024 José Juan Hernández Gálvez 
+<br>Github: https://github.com/josejuanhernandezgalvez<br> 
+(c) 2024 Victoria Torres          
+Github: https://github.com/Vicks0712<br>
+(c) 2024 Joel Del Rosario Pérez
+<br>Github: https://github.com/Joeel71<br>
