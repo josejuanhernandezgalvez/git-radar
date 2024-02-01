@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="094927ba-3efb-44ff-abaa-bc3e3891dec1" name="Changes" comment="project finished" />
+    <list default="true" id="094927ba-3efb-44ff-abaa-bc3e3891dec1" name="Changes" comment="github actions">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/tokenizer.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/tokenizer-ci.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -409,7 +411,31 @@
       <option name="project" value="LOCAL" />
       <updated>1706700757665</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="tokenizer with github actions">
+      <option name="closed" value="true" />
+      <created>1706794565660</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1706794565660</updated>
+    </task>
+    <task id="LOCAL-00018" summary="hot-fix: version of github actions files changed">
+      <option name="closed" value="true" />
+      <created>1706794668504</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1706794668504</updated>
+    </task>
+    <task id="LOCAL-00019" summary="github actions">
+      <option name="closed" value="true" />
+      <created>1706794773659</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1706794773659</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -439,7 +465,10 @@
     <MESSAGE value="refactor made: dabaseViews -&gt; databaseViews" />
     <MESSAGE value="docker image and container ready to run" />
     <MESSAGE value="project finished" />
-    <option name="LAST_COMMIT_MESSAGE" value="project finished" />
+    <MESSAGE value="tokenizer with github actions" />
+    <MESSAGE value="hot-fix: version of github actions files changed" />
+    <MESSAGE value="github actions" />
+    <option name="LAST_COMMIT_MESSAGE" value="github actions" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
