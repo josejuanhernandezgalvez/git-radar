@@ -2,9 +2,13 @@ name: Tokenizer CI
 
 on:
   push:
+    branches:
+      - develop
     paths:
       - 'tokenizer/**'
   pull_request:
+    branches:
+      - develop
     paths:
       - 'tokenizer/**'
 
