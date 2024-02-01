@@ -2,9 +2,13 @@ name: Java CI
 
 on:
   push:
+    branches:
+      - main
     paths:
       - 'tokenizer/**'
   pull_request:
+    branches:
+      - main
     paths:
       - 'tokenizer/**'
 
@@ -26,9 +30,8 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ~/.m2
-          key: ${{ runner.os }}-m2-${{ hashFiles('tokenizer/**/pom.xml') }}
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
 
       - name: Build and Test Tokenizer Module
-        run: mvn test
-        working-directory: ./tokenizer
+        run: mvn -B test --file tokenizer/pom.xml
