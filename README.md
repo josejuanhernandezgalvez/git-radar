@@ -31,12 +31,11 @@ This project is structured in two key parts, each contributing uniquely to the o
 4. **DynamoDB Database**
    - Stores the different n-grams formed by the `token-datamart-builder` Lambda in JSON format. The structure includes a "context" field representing the words within the window and a "next" field indicating the next word to complete.
 
+
+![Infrastructure](readme-resources/infrastructure.jpg)
+
+
 #### APIs
-
-
-
-[FOTO DE LAA INFRAESTRUCTURA]
-
 
 
 
