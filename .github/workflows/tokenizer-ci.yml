@@ -1,37 +1,18 @@
 name: Tokenizer CI
 
-on:
-  push:
-    branches:
-      - main
-    paths:
-      - 'tokenizer/**'
-  pull_request:
-    branches:
-      - main
-    paths:
-      - 'tokenizer/**'
+on: [push, pull_request]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
-
       - name: Set up JDK 17
         uses: actions/setup-java@v2
         with:
           java-version: '17'
-          distribution: 'temurin'
-
-      - name: Cache Maven dependencies
-        uses: actions/cache@v2
-        with:
-          path: ~/.m2
-          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
-          restore-keys: ${{ runner.os }}-m2
-
-      - name: Build and Test Tokenizer Module
-        run: mvn -B test --file tokenizer/pom.xml
+      - name: Build and test with Maven
+        run: |
+          cd tokenizer
+          mvn test
