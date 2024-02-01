@@ -31,12 +31,32 @@ This project is structured in two key parts, each contributing uniquely to the o
 4. **DynamoDB Database**
    - Stores the different n-grams formed by the `token-datamart-builder` Lambda in JSON format. The structure includes a "context" field representing the words within the window and a "next" field indicating the next word to complete.
 
-#### APIs
-All the questions that you want to ask must be carried out from the API that it supports the token-suggester module, both to obtain the next token given a list of words, and to obtain a certain metric on one of the processed files. Therefore, we can differentiate two main routes within this api.
+# API Overview
 
-1. On the one hand, we are in charge of giving the user the next token. To access it, you must follow the path /gitradar/token-suggester/next/:word, with word being a mandatory parameter.
+The API provides two main functionalities aimed at enhancing code development and analysis. Below is a breakdown of the available routes within the API:
 
-2. On the other hand, we have the path /gitradar/code-metric/:file/:metric, which returns the value of the desired metric for the indicated file.
+## Token Suggester
+
+### `GET /gitradar/token-suggester/next/:word`
+
+This endpoint is responsible for suggesting the next token (word) based on the input provided. It is designed to assist developers by predicting the next part of the code.
+
+- **Parameter:** `:word` (mandatory)
+   - Description: The current word or token for which the next suggestion is sought.
+
+## Code Metrics
+
+### `GET /gitradar/code-metric/:file/:metric`
+
+This endpoint returns the value of a specified metric for a given file. It aids in the analysis and evaluation of code quality or other metrics.
+
+- **Parameters:**
+   - `:file` (mandatory)
+      - Description: The name or path of the file for which the metric is being queried.
+   - `:metric` (mandatory)
+      - Description: The specific metric to be retrieved for the file.
+
+These routes facilitate the integration of advanced code analysis and suggestion features into development workflows, promoting efficiency and quality in software development projects.
 
 ![Infrastructure](readme-resources/infrastructure.jpg)
 
