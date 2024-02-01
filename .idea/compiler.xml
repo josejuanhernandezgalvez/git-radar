@@ -25,6 +25,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="token-datamart" />
         <module name="token-datamart-builder" />
+        <module name="token-suggester" />
         <module name="metrics" />
         <module name="launcher" />
         <module name="tokenizer" />
