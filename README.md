@@ -97,7 +97,11 @@ To configure the `token-suggester` service, follow these steps:
     ```
 3. Start the container with this command:
     ```
-    docker run -d -p 9090:9090 --name token-suggester --network gitradar_executable_default token-suggester
+    docker run -d \
+    -p 9090:9090 \
+    --name token-suggester \
+    --network gitradar_executable_default
+    token-suggester
     ```
 With these steps, your environment will be configured and ready for use.
 
