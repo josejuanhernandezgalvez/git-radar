@@ -48,7 +48,7 @@ Follow the steps below to correctly configure and execute the development enviro
 
 ### Step 1: Script Execution
 
-Run the provided script with the paths to the JSON files and artifacts.
+Run the provided script `init.bat` with the paths to the JSON files and artifacts.
 
 ### Step 2: Creating DynamoDB Tables
 
