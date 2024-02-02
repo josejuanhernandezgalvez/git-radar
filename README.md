@@ -133,7 +133,7 @@ With these steps, your environment will be configured and ready for use.
 
 (c) 2024 José Juan Hernández Gálvez 
 <br>Github: https://github.com/josejuanhernandezgalvez<br> 
-(c) 2024 Victoria Torres Rodríguez
+(c) 2024 Victoria Torres Rodríguez <br>
 Github: https://github.com/Vicks0712<br>
 (c) 2024 Joel Del Rosario Pérez
 <br>Github: https://github.com/Joeel71<br>
